@@ -6,7 +6,7 @@ package com.core;
 
 /**
  *
- * @author omem-
+ * @author Memo
  */
 public class Operations {
     
@@ -25,7 +25,7 @@ public class Operations {
             default -> 0;
         };
     }
- //Celsius,  k, Fahrenheit
+ //Celsius,  kelvin, Fahrenheit
     private double fromC(int type) {
         return switch (type) {
             case 0 ->  temp.getGrados() ;
