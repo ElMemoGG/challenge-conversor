@@ -6,7 +6,7 @@ package com.core;
 
 /**
  *
- * @author omem-
+ * @author Memo
  */
 public class Money {
     

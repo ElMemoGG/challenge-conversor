@@ -4,13 +4,13 @@
  */
 package com.core;
 
-import java.text.DecimalFormat;
+
 import javax.swing.JOptionPane;
 
 
 /**
  *
- * @author omem-
+ * @author Memo
  */
 public class Cash extends javax.swing.JPanel {
 
@@ -20,6 +20,7 @@ public class Cash extends javax.swing.JPanel {
     double[] libras ={1.29,     21.73,  1.16,   1,      180.15};
     double[] yenes = {0.0071,   0.12,   0.0064, 0.0055, 1};
     
+    //Matriz con las respectivas conversiones 
     double[][] monedas = {{1,        16.88,  0.90,   0.78,   139.90},
                           {0.059,    1,      0.053,  0.046,  8.29},
                           {1.11,     18.81,  1,      0.87,   155.86},
@@ -85,22 +86,17 @@ public class Cash extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jBChangeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBChangeActionPerformed
-        // TODO add your handling code here:
+
         int index1 = jComboBox1.getSelectedIndex();
         int index2 = jComboBox2.getSelectedIndex();
-        //System.out.println(index1+ " "+ index2);
-        //System.out.println(monedas[index1][index2]);
         Money money = new Money(monedas, index1);
-        
-        
-        //DecimalFormat df = new DecimalFormat("#.000");
         
         JError.setText("");
         try {
-        //System.out.println("texto: "+Input1.getText());
+      
         double qt = Double.parseDouble(Input1.getText());
         double result =  money.setConvert(qt, index2 );
-        Input2.setText(String.format("%.3f", result) ); //String.valueOf(result)
+        Input2.setText(String.format("%.3f", result) ); 
             
         } catch (NumberFormatException e) {
           JOptionPane.showMessageDialog(null, "Solo números", "Error", JOptionPane.ERROR_MESSAGE);

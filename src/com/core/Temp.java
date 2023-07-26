@@ -8,7 +8,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author omem-
+ * @author Memo
  */
 public class Temp extends javax.swing.JPanel {
 
@@ -50,6 +50,8 @@ public class Temp extends javax.swing.JPanel {
             }
         });
         add(jBResult, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 340, 100, 50));
+
+        Input2.setEditable(false);
         add(Input2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 180, 180, 50));
 
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Celsius", "Kelvin", "Fahrenheit" }));
@@ -64,7 +66,7 @@ public class Temp extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jBResultActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBResultActionPerformed
-        // TODO add your handling code here:
+
         JError.setText("");
         int index1 = jComboBox1.getSelectedIndex();
         int index2 = jComboBox2.getSelectedIndex();
